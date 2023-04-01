@@ -1,30 +1,23 @@
 import React from 'react'
-import {
-    AiFillFacebook,
-    AiFillTwitterSquare,
-    AiFillInstagram,
-    AiFillYoutube,
-  } from "react-icons/ai";
-import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
-
-function Card() {
+import {  RiArrowUpSFill } from "react-icons/ri";
+function Card({icon, cardClass, iconClass}) {
   return (
-    <div className=" container mt-6 border-solid border-slate-400 border-2">
-        <div className="">
-        <span className="">
-            <AiFillFacebook />
-        </span>
-        <span className="">@abcd</span>
+    <div className={cardClass}>
+        <div className=" flex gap-1 items-center justify-center">
+          <span className={iconClass}>
+              {icon}
+          </span>
+          <span className=" dark:text-slate-50">@abcd</span>
         </div>
-        <h2 className=" ">
-        1987
+        <h2 className=" text-center font-bold text-5xl pt-6 dark:text-slate-50">
+          1987
         </h2>
-        <p className=" ">
-        Followers
+        <p className=" dark:text-slate-50 text-center text-md uppercase tracking-[3px] text-stone-400 pb-6">
+         Followers
         </p>
-        <div className=" ">
+        <div className=" flex gap-1 items-center justify-center text-mainGreen">
         <span>
-            <RiArrowUpSFill />
+            <RiArrowUpSFill size={22}/>
         </span>
         <span>Today</span>
         </div>
